@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for c in range(ord('z'), ord('a') -1, -2):
-    print("{:c}{:}".format(c, chr(c - 33)), end="")
+print("".join(["{:c}".format(c-32 if c % 2 else c)
+      for c in range(122, 96, -1)]), end="")
